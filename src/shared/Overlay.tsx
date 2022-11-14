@@ -16,28 +16,26 @@ export const Overlay = defineComponent({
     return () => <>
       <div class={s.mask} onClick={close}></div>
       <div class={s.overlay}>
-      <section class={s.currentUser} onClick={onClickSignIn}>
+        <section class={s.currentUser} onClick={onClickSignIn}>
           <h2>未登录用户</h2>
           <p>点击这里登录</p>
         </section>
         <nav>
-          <ul  class={s.action_list}>
+          <ul class={s.action_list}>
             <li>
-              <Icon name="chart1" />
               <RouterLink to="/statistics" class={s.action}>
-                <Icon name="charts" class={s.icon} />
+                <Icon name="chart1" class={s.icon} />
                 <span>统计图表</span>
               </RouterLink>
             </li>
             <li>
-            <RouterLink to="/export"class={s.action}>
-                <Icon name="chart2" class={s.icon} />
+              <RouterLink to="/export" class={s.action}>
+                <Icon name="chart2" class={s.icon}/>
                 <span>导出数据</span>
               </RouterLink>
             </li>
             <li>
-            <RouterLink to="/notify"class={s.action}>
-            <RouterLink to="/notify" class={s.action}>
+              <RouterLink to="/notify" class={s.action}>
                 <Icon name="clock" class={s.icon}/>
                 <span>记账提醒</span>
               </RouterLink>
