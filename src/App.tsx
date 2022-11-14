@@ -1,6 +1,4 @@
 import { defineComponent,ref } from "vue";
-
-
 export const App = defineComponent({
     setup(){
         const refCount = ref(0)
@@ -15,6 +13,18 @@ export const App = defineComponent({
             <button onClick={onClick}>+1</button>
         </div>
         </>
+import "./App.scss"
+import { defineComponent, Transition, VNode } from "vue";
+import { RouteLocationNormalizedLoaded, RouterView } from "vue-router";
+
+export const App = defineComponent({
+    setup(){
+        return () => (
+        <div class="page">
+           <RouterView/>
+        </div>
+        )
+
     }
 })
 
