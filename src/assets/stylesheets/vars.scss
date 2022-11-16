@@ -1,5 +1,6 @@
 :root {
 --amount-text: #e07115;
+--app-name-text: #e07115;
 --bg: white;
 --button-bg-important: rgb(245, 177, 82);
 --button-bg: rgba(246,126,13,1);
@@ -42,6 +43,7 @@
 --total-income: #FE7275;
 --total-expenses: #53A867;
 --transition-duration: 0.5s;
+--van-overlay-z-index: 64;
 --welcome-bg-end: rgb(247, 210, 162);
 --welcome-bg-start: rgba(246,126,13,1);
 --welcome-nav-gap: 8px;
