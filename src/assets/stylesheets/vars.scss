@@ -1,10 +1,10 @@
 :root {
---amount-text: #e07115;
---app-name-text: #e07115;
+--amount-text: #a992e1;
+--app-name-text: #7878FF;
 --bar-bg: #CCC;
 --bg: white;
---button-bg-important: rgb(245, 177, 82);
---button-bg: rgba(246,126,13,1);
+--button-bg-important: #7878FF;
+--button-bg:#5c33be;
 --button-bg-danger: #E10505;
 --button-border-color: #ddd;
 --button-font-size: 18px;
@@ -19,7 +19,7 @@
 --error-color: #E10505;
 --float-button-bg: var(--button-bg);
 --float-button-text: white;
---input-border-color: rgba(246,126,13,1);
+--input-border-color: #5c33be;
 --input-min-height: 48px;
 --input-radius: var(--button-radius);
 --input-shadow: rgba(0,0,0,0.25);
@@ -27,13 +27,13 @@
 --list-amount-text: var(--amount-text);
 --list-time-text: var(--date-text);
 --inputpad-button-bg: white;
---main: rgba(246,126,13,1);
+--main:  #5c33be;
 --navbar-bg-end: var(--welcome-bg-end);
 --navbar-bg-start: var(--welcome-bg-start);
 --navbar-text: white;
 --overlay-bg: white;
 --overlay-mask-bg: rgba(0, 0, 0, 0.5);
---overlay-user-bg:  rgba(246,126,13,1);;
+--overlay-user-bg:  #5c33be;
 --overlay-user-text: white;
 --tabs-indicator-bg: rgba(255, 255, 255, 0.5);
 --tag-bg: #EFEFEF;
@@ -46,8 +46,8 @@
 --total-expenses: #53A867;
 --transition-duration: 0.5s;
 --van-overlay-z-index: 64;
---welcome-bg-end: rgb(247, 210, 162);
---welcome-bg-start: rgba(246,126,13,1);
+--welcome-bg-end: #8f4cd7;
+--welcome-bg-start: #5d33be;
 --welcome-nav-gap: 8px;
 --welcome-nav-height: 64px;
 --welcome-text:white;
