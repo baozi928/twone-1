@@ -6,6 +6,7 @@ import { useBool } from '../hooks/useBool';
 import { http } from '../shared/Http';
 import { Button } from '../shared/Button';
 import { Form, FormItem } from '../shared/Form';
+import { BackIcon } from '../shared/BackIcon';
 import { Icon } from '../shared/Icon';
 import { history } from '../shared/history';
 import { refreshMe } from '../shared/me';
@@ -65,7 +66,7 @@ export const SignInPage = defineComponent({
       <MainLayout>{
         {
           title: () => '登录',
-          icon: () => <Icon name="left" />,
+          icon: () => <BackIcon />,
           default: () => (
             <div class={s.wrapper}>
               <div class={s.logo}>

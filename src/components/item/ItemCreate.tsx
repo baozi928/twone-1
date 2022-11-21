@@ -10,6 +10,7 @@ import { useTags } from '../../shared/useTags';
 import { http } from '../../shared/Http';
 import { InputPad } from './InputPad';
 import { Button } from '../../shared/Button';
+import { BackIcon } from '../../shared/BackIcon';
 import { Tags } from './Tags';
 export const ItemCreate = defineComponent({
   props: {
@@ -43,7 +44,7 @@ export const ItemCreate = defineComponent({
     return () => (
           <MainLayout class={s.layout}>{{
         title: () => '记一笔',
-        icon: () => <Icon name="left" class={s.navIcon} />,
+        icon: () => <BackIcon/>,
         default: ()=> <>
            <div class={s.wrapper}>
             <Tabs v-model:selected={formData.kind} class={s.tabs}>
