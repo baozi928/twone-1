@@ -14,7 +14,7 @@ export const StartPage = defineComponent({
     return () => (
       <MainLayout>{
         {
-          title: () => '山竹记账',
+          title: () => '柿子记账',
           icon: () => <OverlayIcon />,
           default: () => <>
             <Center class={s.welcome1_wrapper}>

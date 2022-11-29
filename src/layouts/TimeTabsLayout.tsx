@@ -60,7 +60,7 @@ export const TimeTabsLayout = defineComponent({
     return () => (
       <MainLayout>{
         {
-          title: () => '山竹记账',
+          title: () => '柿子记账',
           icon: () => <OverlayIcon />,
           default: () => <>
             <Tabs classPrefix='customTabs' v-model:selected={refSelected.value}
