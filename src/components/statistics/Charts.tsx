@@ -10,6 +10,8 @@ import { Time } from '../../shared/time';
 const DAY = 24 * 3600 * 1000
 type Data1Item = {happen_at:string, amount: number}
 type Data1 = Data1Item[]
+type Data2Item = { tag_id: number; tag: Tag; amount: number }
+type Data2 = Data2Item[]
 export const Charts = defineComponent({
   props: {
     startDate: {
@@ -43,9 +45,37 @@ export const Charts = defineComponent({
         happen_after: props.startDate,
         happen_before: props.endDate,
         kind: kind.value,
+        group_by: 'happen_at',
         _mock: 'itemSummary'
       })
       data1.value = response.data.groups
+    })
+
+    const data2 = ref<Data2>([])
+    const betterData2 = computed<{ name: string; value: number }[]>(() =>
+      data2.value.map((item) => ({
+        name: item.tag.name,
+        value: item.amount
+      }))
+    )
+
+    const betterData3 = computed<{tag:Tag, amount:number, percent: number}[]>(()=>{
+      const total = data2.value.reduce((sum, item) => sum + item.amount, 0)
+      return data2.value.map(item => ({
+        ...item,
+        percent: Math.round(item.amount / total * 100)
+      }))
+    })
+
+    onMounted(async () => {
+      const response = await http.get<{ groups: Data2; summary: number }>('/items/summary', {
+        happen_after: props.startDate,
+        happen_before: props.endDate,
+        kind: kind.value,
+        group_by: 'tag_id',
+        _mock: 'itemSummary'
+      })
+      data2.value = response.data.groups
     })
     return () => (
         <div class={s.wrapper}>
@@ -54,8 +84,8 @@ export const Charts = defineComponent({
           { value: 'income', text: '收入' }
         ]} v-model={kind.value} />
         <LineChart data={betterData1.value}/>
-        <PieChart />
-        <Bars />
+        <PieChart data={betterData2.value} />
+        <Bars data={betterData3.value}/>
       </div>
     )
   }
