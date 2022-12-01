@@ -67,3 +67,17 @@
   padding-bottom: 16px;
   text-align: center;
 }
+.button {
+  width: 100%;
+  &_wrapper {
+    padding: 16px 16px;
+  }
+}
+
+.welcome1{
+  width: 128px;
+  height: 128px;
+  &_wrapper{
+    padding: 120px 0;
+  }
+}

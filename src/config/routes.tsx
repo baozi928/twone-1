@@ -8,7 +8,6 @@ import { Third } from "../components/welcome/Third";
 import { ThirdActions } from "../components/welcome/ThirdActions";
 import { Fourth } from "../components/welcome/Fourth";
 import { FourthActions } from "../components/welcome/FourthActions";
-import { StartPage } from "../views/StartPage";
 import { SignInPage } from "../views/SignInPage";
 import { ItemCreate } from "../components/item/ItemCreate";
 import { ItemList } from "../components/item/ItemList";
@@ -18,7 +17,6 @@ import { TagEdit } from "../components/tag/TagEdit";
 import { TagPage } from "../views/TagPage";
 import { StatisticsPage } from "../views/StatisticsPage";
 import { ComingSoon } from "../shared/ComingSoon";
-import { http } from "../shared/Http";
 
 export const routes: RouteRecordRaw[] = [
   { path: "/", redirect: "/welcome" },
@@ -26,7 +24,7 @@ export const routes: RouteRecordRaw[] = [
     path: "/welcome",
     component: Welcome,
     beforeEnter: (to, from, next) => {
-      localStorage.getItem('skipFeatures') === 'yes' ? next('/start') : next()
+      localStorage.getItem('skipFeatures') === 'yes' ? next('/items') : next()
     },
     children: [
       { path: "", redirect: "/welcome/1" },
@@ -36,7 +34,6 @@ export const routes: RouteRecordRaw[] = [
       { path: "4", name: "Welcome4",components: { main: Fourth, footer: FourthActions } },
     ],
   },
-  {path:'/start', component: StartPage},
   {
     path:'/items',component:ItemPage,
     children:[

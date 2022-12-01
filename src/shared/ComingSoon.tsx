@@ -11,8 +11,8 @@ export const ComingSoon = defineComponent({
   setup: (props, context) => {
     return () => (
       <div>
-        <Center class={s.pig_wrapper}>
-          <Icon name="pig" class={s.pig} />
+        <Center class={s.welcome1_wrapper}>
+          <Icon name="welcome1" class={s.welcome1} />
         </Center>
         <p class={s.text}>敬请期待</p>
       </div>
