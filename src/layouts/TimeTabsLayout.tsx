@@ -16,12 +16,8 @@ const demo = defineComponent({
     endDate: {
       type: String as PropType<string>,
       required: false
-    },
-    hideThisYear: {
-      type: Boolean,
-      default: false
     }
-  },
+  }
 })
 export const TimeTabsLayout = defineComponent({
   props: {
@@ -29,11 +25,15 @@ export const TimeTabsLayout = defineComponent({
       type: Object as PropType<typeof demo>,
       required: true
     },
-  rerenderOnSwitchTab: {
-    type: Boolean,
-    default: false
+    rerenderOnSwitchTab: {
+      type: Boolean,
+      default: false
+    },
+    hideThisYear: {
+      type: Boolean,
+      default: false
+    }
   },
-},
   setup: (props, context) => {
     const refSelected = ref('本月')
     const time = new Time()

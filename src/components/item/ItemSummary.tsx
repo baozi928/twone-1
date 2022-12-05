@@ -28,6 +28,7 @@ export const ItemSummary = defineComponent({
     }
     const itemStore = useItemStore(['items', props.startDate, props.endDate])
     useAfterMe(() => itemStore.fetchItems(props.startDate, props.endDate))
+    
     watch(
       () => [props.startDate, props.endDate],
       () => {
@@ -117,6 +118,7 @@ export const ItemSummary = defineComponent({
           <>
           <Center class={s.welcome1_wrapper}>
             <Icon name="welcome1" class={s.welcome1} />
+            <span class={s.no}>目前没有数据</span>
           </Center>
           <div class={s.button_wrapper}>
             <RouterLink to="/items/create">

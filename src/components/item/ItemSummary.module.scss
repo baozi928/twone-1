@@ -73,11 +73,17 @@
     padding: 16px 16px;
   }
 }
-
+.welcome1_wrapper{
+  display: flex;
+  flex-direction: column;
+}
 .welcome1{
   width: 128px;
   height: 128px;
   &_wrapper{
     padding: 120px 0;
   }
+}
+.no{
+  font-size: 18px;
 }
