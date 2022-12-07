@@ -1,6 +1,11 @@
 # Vue3 + TSX项目
 
-# 开发
+## 部署
+```bash
+pnpm run build --base /
+bin/coscli-linux cp r dist cos://youyuquan-t-1-1315694120
+
+```
 
 ## 编码规范
 
